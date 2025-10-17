@@ -1,0 +1,321 @@
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Affordable Internet Packages</h1>
+    <p>Get high-speed internet at the most competitive prices in Kenya. Available on all networks with instant activation.</p>
+    <a href="#packages" class="btn">View Packages</a>
+</section>
+
+<hr>
+
+<!-- Packages Section -->
+<section id="packages" class="packages-section">
+    <div class="company-header">
+        <h1>STARNET INTERNET</h1>
+        <div class="mobile-icon"><i class="fas fa-wifi"></i></div>
+    </div>
+    <div class="payment-info">Affordable Internet Packages <i>(Available on all networks)</i></div>
+    
+    <div class="packages-container">
+         <!-- First Column -->
+        <button class="package-btn" onclick="showPaymentInstructions('1 Day - 2GB (Ksh 49)', 49)">
+            <span>1 Day - 2GB</span>
+            <span>Ksh 49</span>
+        </button>
+        <button class="package-btn" onclick="showPaymentInstructions('3 Days - 5GB (Ksh 59)', 59)">
+            <span>3 Days - 5GB</span>
+            <span>Ksh 59</span>
+        </button>
+        <button class="package-btn" onclick="showPaymentInstructions('7 Days - 10GB (Ksh 69)', 69)">
+            <span>7 Days - 10GB</span>
+            <span>Ksh 69</span>
+        </button>
+        <button class="package-btn" onclick="showPaymentInstructions('14 Days - 25GB (Ksh 79)', 79)">
+            <span>14 Days - 25GB</span>
+            <span>Ksh 79</span>
+        </button>
+        
+        <!-- Second Column -->
+        <button class="package-btn" onclick="showPaymentInstructions('30 Days - Unlimited (Ksh 99)', 99)">
+            <span>30 Days - Unlimited</span>
+            <span>Ksh 99</span>
+        </button>
+        <button class="package-btn" onclick="showPaymentInstructions('60 Days - Unlimited (Ksh 180)', 180)">
+            <span>60 Days - Unlimited</span>
+            <span>Ksh 180</span>
+        </button>
+        <button class="package-btn" onclick="showPaymentInstructions('90 Days - Unlimited (Ksh 250)', 250)">
+            <span>90 Days - Unlimited</span>
+            <span>Ksh 250</span>
+        </button>
+        <button class="package-btn" onclick="showPaymentInstructions('120 Days - Unlimited (Ksh 320)', 320)">
+            <span>120 Days - Unlimited</span>
+            <span>Ksh 320</span>
+        </button>
+    </div>          
+
+</section>
+
+<hr>
+
+<!-- Reviews Section -->
+<section class="reviews">
+    <div class="section-title">
+        <h2>What Our Customers Say</h2>
+    </div>
+    
+    <div class="reviews-container">
+        <!-- Review 1 -->
+        <div class="review-card">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"I've been using Starnet Internet for my daily internet needs and it's been reliable and affordable. The 1 Day package is perfect for my usage."</p>
+            <div class="reviewer">Sarah Wanjiku</div>
+            <div class="reviewer-title">University Student</div>
+        </div>
+        
+        <!-- Review 2 -->
+        <div class="review-card">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"The unlimited monthly package has transformed my small business. I can now video call clients without worrying about data."</p>
+            <div class="reviewer">Michael Otieno</div>
+            <div class="reviewer-title">Small Business Owner</div>
+        </div>
+        
+        <!-- Review 3 -->
+        <div class="review-card">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"As a content creator, the 14 Days package gives me enough data at an unbeatable price. Activation is instant too!"</p>
+            <div class="reviewer">Amina Mohammed</div>
+            <div class="reviewer-title">Content Creator</div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose">
+    <div class="section-title">
+        <h2>Why Choose Starnet Internet</h2>
+    </div>
+    
+    <div class="features">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Fast Speeds</h3>
+            <p>Enjoy high-speed internet connectivity across all networks in Kenya with our optimized packages.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <h3>Affordable Rates</h3>
+            <p>Our packages offer the best value for money with competitive pricing and generous data allocations.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+            </div>
+            <h3>Instant Activation</h3>
+            <p>Get connected within minutes after payment confirmation. No long waiting periods.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Payment Instructions Modal -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h2>Payment Instructions</h2>
+        <p id="selectedPackage" style="font-weight: bold; color: var(--primary); text-align: center; margin-bottom: 15px;"></p>
+        
+        <div class="till-container">
+            <div class="till-label">Till Number:</div>
+            <div class="till-number">
+                <span id="tillNumber">8600480</span>
+                <button class="copy-btn" onclick="copyTillNumber()">
+                    <i class="far fa-copy"></i> Copy
+                </button>
+            </div>
+        </div>
+        
+        <button class="collapsible" onclick="toggleCollapsible()">Show Payment Instructions</button>
+        <div class="collapsible-content" id="instructionsContent">
+            <div class="instructions">
+                <h3>How to pay via M-Pesa</h3>
+                <ol>
+                    <li>Go to M-Pesa on your phone</li>
+                    <li>Select "Lipa na M-Pesa"</li>
+                    <li>Select "Buy Goods and Services"</li>
+                    <li>Enter Till Number: <strong>8600480</strong></li>
+                    <li>Enter the exact amount shown above</li>
+                    <li>Enter your M-Pesa PIN</li>
+                    <li>Confirm all details are correct and send</li>
+                </ol>
+                
+                <p style="margin-top: 15px; font-style: italic; color: #666;">
+                    <i class="fas fa-info-circle" style="color: var(--primary);"></i> 
+                    Your package will be activated automatically after payment confirmation.
+                </p>
+            </div>
+        </div>
+        
+        <p style="text-align: center; margin: 15px 0; color: var(--gray);">
+            After payment, you'll receive a confirmation SMS. If you encounter any issues, please contact our support.
+        </p>
+    </div>
+</div>
+
+<!-- Toast notification -->
+<div id="toast" class="toast">
+    <i class="fas fa-check-circle"></i>
+    <span>Till number copied to clipboard!</span>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>Starnet Internet</h3>
+            <p>Providing affordable and reliable internet packages across Kenya since 2020. Connecting you to what matters most.</p>
+        </div>
+        
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="footer-links">
+                <li><i class="fas fa-envelope"></i> <a href="mailto:starnetinternethelp@gmail.com">Contact us</a></li>
+                <li><i class="fas fa-clock"></i> Support: 24/7</li>
+                <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 Starnet Internet. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Show payment instructions modal with package details
+    function showPaymentInstructions(packageName, amount) {
+        const modal = document.getElementById('paymentModal');
+        document.getElementById('selectedPackage').textContent = `${packageName} - Ksh ${amount}`;
+        modal.style.display = 'flex';
+        
+        // Reset animation
+        const modalContent = modal.querySelector('.modal-content');
+        modalContent.style.animation = 'none';
+        setTimeout(() => {
+            modalContent.style.animation = 'modalOpen 0.3s forwards';
+        }, 10);
+        
+        // Collapse instructions by default on mobile
+        if (window.innerWidth <= 768) {
+            const content = document.getElementById('instructionsContent');
+            content.style.maxHeight = '0';
+            const collapsible = document.querySelector('.collapsible');
+            collapsible.classList.remove('active');
+            collapsible.innerHTML = 'Show Payment Instructions <span style="float:right;">+</span>';
+        } else {
+            // Expand by default on desktop
+            const content = document.getElementById('instructionsContent');
+            content.style.maxHeight = content.scrollHeight + 'px';
+            const collapsible = document.querySelector('.collapsible');
+            collapsible.classList.add('active');
+            collapsible.innerHTML = 'Hide Payment Instructions <span style="float:right;">−</span>';
+        }
+    }
+    
+    // Toggle collapsible instructions
+    function toggleCollapsible() {
+        const collapsible = document.querySelector('.collapsible');
+        collapsible.classList.toggle('active');
+        const content = document.getElementById('instructionsContent');
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            collapsible.innerHTML = 'Show Payment Instructions <span style="float:right;">+</span>';
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            collapsible.innerHTML = 'Hide Payment Instructions <span style="float:right;">−</span>';
+        } 
+    }
+    
+    // Close modal
+    function closeModal() {
+        document.getElementById('paymentModal').style.display = 'none';
+    }
+    
+    // Copy till number to clipboard
+    function copyTillNumber() {
+        const tillNumber = document.getElementById('tillNumber').textContent;
+        navigator.clipboard.writeText(tillNumber).then(() => {
+            showToast();
+        });
+    }
+    
+    // Show toast notification
+    function showToast() {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+    
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('paymentModal')) {
+            closeModal();
+        }
+    }
+    
+    // Add animation to package buttons on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.package-btn');
+        buttons.forEach((btn, index) => {
+            setTimeout(() => {
+                btn.style.opacity = '1';
+                btn.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    });
+</script>
